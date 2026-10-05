@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieHub - Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <h1 class="logo">FoodieHub 🍔</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="cart.html">Cart 🛒</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="menu-section">
+        <h2>Your Cart</h2>
+        <p>Review your selected food items</p>
+
+        <div id="cart-container"></div>
+
+        <h3 id="total"></h3>
+
+        <a href="checkout.html" class="btn">Proceed to Checkout</a>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 FoodieHub | Online Food Ordering System</p>
+</footer>
+
+<script>
+    let cart = JSON.parse(localStorage.getItem("foodieCart")) || [];
+
+    let container = document.getElementById("cart-container");
+    let totalElement = document.getElementById("total");
+
+    if (cart.length === 0) {
+
+        container.innerHTML = "<h3>Your cart is empty 🛒</h3>";
+        totalElement.innerHTML = "";
+
+    } else {
+
+        let total = 0;
+
+        cart.forEach((item) => {
+
+            let itemTotal = item.price * item.quantity;
+            total += itemTotal;
+
+            container.innerHTML += `
+                <div class="food-card">
+                    <h3>${item.name}</h3>
+                    <p>Price: ₹${item.price}</p>
+                    <p>Quantity: ${item.quantity}</p>
+                    <p>Subtotal: ₹${itemTotal}</p>
+                </div>
+            `;
+
+        });
+
+        totalElement.innerHTML = "Total: ₹" + total;
+    }
+</script>
+
+</body>
+</html>

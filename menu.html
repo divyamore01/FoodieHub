@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieHub - Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">FoodieHub 🍔</h1>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="cart.html">Cart 🛒</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="menu-section">
+            <h2>Our Menu</h2>
+            <p>Choose your favourite food</p>
+
+            <div class="food-container">
+
+                <div class="food-card">
+                    <div class="food-icon">🍕</div>
+                    <h3>Margherita Pizza</h3>
+                    <p>Classic cheese pizza with tomato sauce.</p>
+                    <h4>₹199</h4>
+                    <button onclick="addToCart('Margherita Pizza', 199)">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🍔</div>
+                    <h3>Veg Burger</h3>
+                    <p>Fresh vegetable burger with crispy patty.</p>
+                    <h4>₹149</h4>
+                    <button onclick="addToCart('Veg Burger', 149)">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🍜</div>
+                    <h3>Veg Noodles</h3>
+                    <p>Hot and tasty noodles with fresh vegetables.</p>
+                    <h4>₹129</h4>
+                    <button onclick="addToCart('Veg Noodles', 129)">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🍝</div>
+                    <h3>White Sauce Pasta</h3>
+                    <p>Creamy pasta with delicious white sauce.</p>
+                    <h4>₹179</h4>
+                    <button onclick="addToCart('White Sauce Pasta', 179)">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🥪</div>
+                    <h3>Cheese Sandwich</h3>
+                    <p>Grilled sandwich loaded with cheese.</p>
+                    <h4>₹99</h4>
+                    <button onclick="addToCart('Cheese Sandwich', 99)">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-icon">🍰</div>
+                    <h3>Chocolate Cake</h3>
+                    <p>Soft and delicious chocolate cake.</p>
+                    <h4>₹129</h4>
+                    <button onclick="addToCart('Chocolate Cake', 129)">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 FoodieHub | Online Food Ordering System</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
